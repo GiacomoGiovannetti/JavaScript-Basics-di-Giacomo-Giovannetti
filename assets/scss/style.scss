@@ -1,0 +1,122 @@
+@import "config";
+
+*{
+    box-sizing : border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body{
+    background-color: $primary-color;
+    color: $secondary-color;
+    height: 100vh;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center ;
+}
+
+#container{
+    border: 1px  solid $border-color;
+    height: 50vh;
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    h1{
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    #value-exp-container{
+        border: 1px solid $border-color;
+        margin: 0 1rem;
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+            
+        #value-container{
+            border: 1px solid $border-color;
+            height: 25vh;
+            width: 90%;
+            margin: 1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            #value{
+                text-align: center;
+                font-size: 5rem;
+            }
+        }
+
+        #exp-container{
+            width: 80%;
+            border: 1px solid $border-color;
+            border-radius: 1rem;
+            margin: 1rem;
+            margin-top: 0.5rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+
+            #exp-bar{
+                width:90%;
+                height: 100%;
+                border: 1px solid black;
+                border-top-right-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+
+                #exp{
+                    width: 0%;
+                    height:100%;
+                    background-color: blue;
+                    border-top-right-radius: 1rem;
+                    border-bottom-right-radius: 1rem;
+                    margin: 0.02rem;
+                }
+            }
+
+            #lvl-container{
+                order: -1;
+                width:10%;
+                height:100%;
+
+                #lvl-value{
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    #btn-container{
+        border: 1px solid $border-color;
+        margin: 1rem; 
+        padding: 0.5rem 1rem;
+        display: flex; 
+        justify-content: space-around;
+
+        .btn{
+            border: 2.5px solid $border-color;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            font: {
+                weight: 600;
+                size: 1.5rem;
+            }
+            //transition
+            //transform
+        }
+        
+        #incr-10{
+            order: 1;
+        }
+    }
+}
+
+
+

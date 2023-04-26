@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #DADADA;
+  color: #121412;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#container {
+  border: 1px solid #78A582;
+  height: 50vh;
+  width: 85vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#container h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+#container #value-exp-container {
+  border: 1px solid #78A582;
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#container #value-exp-container #value-container {
+  border: 1px solid #78A582;
+  height: 25vh;
+  width: 90%;
+  margin: 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#container #value-exp-container #value-container #value {
+  text-align: center;
+  font-size: 5rem;
+}
+#container #value-exp-container #exp-container {
+  width: 80%;
+  border: 1px solid #78A582;
+  border-radius: 1rem;
+  margin: 1rem;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#container #value-exp-container #exp-container #exp-bar {
+  width: 90%;
+  height: 100%;
+  border: 1px solid black;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+#container #value-exp-container #exp-container #exp-bar #exp {
+  width: 0%;
+  height: 100%;
+  background-color: blue;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  margin: 0.02rem;
+}
+#container #value-exp-container #exp-container #lvl-container {
+  order: -1;
+  width: 10%;
+  height: 100%;
+}
+#container #value-exp-container #exp-container #lvl-container #lvl-value {
+  text-align: center;
+}
+#container #btn-container {
+  border: 1px solid #78A582;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+#container #btn-container .btn {
+  border: 2.5px solid #78A582;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+#container #btn-container #incr-10 {
+  order: 1;
+}
