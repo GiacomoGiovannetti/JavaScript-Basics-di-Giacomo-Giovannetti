@@ -15,10 +15,15 @@ const title = document.createElement('h1');
     title.textContent = 'EXP Counter';
     container.appendChild(title);
 
+//creazione contenitore exp e Value
+const innerContainer = document.createElement('div');
+    container.appendChild(innerContainer);
+    innerContainer.setAttribute('id', 'value-exp-container');
+
 //creazione contenitore valore e  paragrafo valore
 
 const valueContainer = document.createElement('div');
-    container.appendChild(valueContainer);
+    innerContainer.appendChild(valueContainer);
     valueContainer.setAttribute('id', 'value-container');
 
 const value = document.createElement('p');
@@ -29,7 +34,7 @@ const value = document.createElement('p');
 //creazione contenitore Exp 
 
 const expContainer = document.createElement('div');
-    container.appendChild(expContainer);
+    innerContainer.appendChild(expContainer);
     expContainer.setAttribute('id', 'exp-container');
 
 //creazione barra exp e livello 
