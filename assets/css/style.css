@@ -71,7 +71,6 @@ body {
   background-color: blue;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  margin: 0.02rem;
 }
 #container #value-exp-container #exp-container #lvl-container {
   order: -1;
