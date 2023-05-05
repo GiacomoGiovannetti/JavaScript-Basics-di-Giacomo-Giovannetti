@@ -9,7 +9,7 @@ buttons.forEach(function(btn) {
     btn.addEventListener('click', function(e){
         const styles = e.currentTarget.id;
         if(styles.includes('btn-10')){
-            if(count < 9){
+            if(count <= 9){
                 count = 0; 
             }else{
                 count-= 10;
@@ -34,6 +34,5 @@ buttons.forEach(function(btn) {
         }
 
        valore.textContent = count ;
-
     })
 });

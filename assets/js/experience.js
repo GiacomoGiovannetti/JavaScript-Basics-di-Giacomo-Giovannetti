@@ -1,5 +1,7 @@
 const expAmount = document.querySelector('#exp');
 const lvlValue = document.querySelector('#lvl-value');
+const lvlPopUpDisplay = document.querySelector('#lvl-pop-up-container');
+const lvlPopUpValue = document.querySelector('#lvl-pop-up');
  
 let lvlCount = 1;
 let expWidth = 0; 
@@ -26,11 +28,15 @@ buttons.forEach(function(btn){
 
         expAmount.style.width = `${expWidth}%`;
 
-        lvlUpByPlus10(styles , counter);
-        lvlUpByPlus1(styles , counter);
+        hideLvlPopUp();
+        lvlUpByPlus10(styles);
+        lvlUpByPlus1(styles);
         lvlDownByMinus10(styles , counter);
         lvlDownByMinus1(styles , counter);
+        
 
         lvlValue.textContent = lvlCount;
     })
 })
+
+

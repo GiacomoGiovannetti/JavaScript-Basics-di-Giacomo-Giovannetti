@@ -47,6 +47,10 @@ body {
   text-align: center;
   font-size: 5rem;
 }
+#container #value-exp-container #lvl-pop-up-container {
+  border: 1px solid #78A582;
+  display: none;
+}
 #container #value-exp-container #exp-container {
   width: 80%;
   border: 1px solid #78A582;

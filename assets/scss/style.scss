@@ -52,6 +52,11 @@ body{
             }
         }
 
+        #lvl-pop-up-container{
+            border: 1px solid $border-color;
+            display: none;
+        }
+
         #exp-container{
             width: 80%;
             border: 1px solid $border-color;

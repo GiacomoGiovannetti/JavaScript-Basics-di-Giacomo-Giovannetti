@@ -31,6 +31,19 @@ const value = document.createElement('p');
     valueContainer.appendChild(value);
     value.setAttribute('id', 'value');
 
+// lvl pop-up container
+
+const lvlPopUpContainer = document.createElement('div');
+    innerContainer.appendChild(lvlPopUpContainer);
+    lvlPopUpContainer.setAttribute('id', 'lvl-pop-up-container');
+
+//lvl pop-up
+
+const lvlPopUp = document.createElement('p');
+    lvlPopUpContainer.appendChild(lvlPopUp);
+    lvlPopUp.textContent='prova';
+    lvlPopUp.setAttribute('id', 'lvl-pop-up');
+
 //creazione contenitore Exp 
 
 const expContainer = document.createElement('div');
