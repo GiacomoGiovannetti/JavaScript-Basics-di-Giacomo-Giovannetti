@@ -1,3 +1,6 @@
+let lvlUpSound = new Audio('assets/audio/oh-yes.mp3');
+let lvlDownSound = new Audio('assets/audio/oh-no.mp3');
+
 function lvlUpByPlus1(styles){
     if(expWidth > 100 && styles.includes('increment')){
         expWidth -= expWidth;
@@ -5,6 +8,7 @@ function lvlUpByPlus1(styles){
         lvlCount++;
         expAmount.style.width= `${expWidth}%`;
         lvlPopUpp(styles);
+        lvlUpSound.play();
     }
 }
 
@@ -13,39 +17,45 @@ function lvlUpByPlus10(styles){
         let previousExp = expWidth ; 
         expWidth -= expWidth;
         previousExp -= 100;
-        expAmount.style.width = `${expWidth}%`;
         expAmount.style.width = `${previousExp}%`;
         lvlCount++;
         expWidth = previousExp;
-        lvlPopUpp(styles)
+        lvlPopUpp(styles);
+        lvlUpSound.play();
     }else if(expWidth > 100 && styles.includes('incr-10')){
-        //expWidth -= expWidth;
-        expWidth-= 100; 
-        lvlCount++
+        if(expWidth > 200){
+            expWidth -= 200;
+        }else{
+            expWidth -= 100;
+        }
+        lvlCount++;
         expAmount.style.width= `${expWidth}%`;
-        console.log('full lvl up', expWidth);
-        lvlPopUpp(styles)
+        lvlPopUpp(styles);
+        lvlUpSound.play();
     }
 }
 
 function lvlDownByMinus1(styles , counter){
     if(styles.includes('decrement')){
-        if(counter == 1){
-            expWidth -= 10; 
-            console.log('counter maggiore di 1');
+        if(counter == 0){
+            expWidth = counter;
+        }else if(counter == 1){
+            expWidth -= 10;
         }else if(expWidth <= 10 && counter >= 10){
             expWidth += 100;
             if(expWidth == 100){
                 lvlCount--;
                 lvlPopUpp(styles);
+                lvlDownSound.play();
                 expAmount.style.width = `${expWidth}%`;
             }
         }else if(expWidth== 100){
             lvlCount--;
             lvlPopUpp(styles);
-            expAmount.style.width = `${expWidth}%`;
+            lvlDownSound.play();
         }
-    }   
+        expAmount.style.width = `${expWidth}`;
+    } 
 }
 
 function lvlDownByMinus10(styles , counter){
@@ -55,17 +65,18 @@ function lvlDownByMinus10(styles , counter){
             if(expWidth > 100){
                 expWidth-= 100;
             }
-            expAmount.style.width = `${expWidth}%`;
             lvlCount--;
-            lvlPopUpp(styles)
+            lvlPopUpp(styles);
+            lvlDownSound.play();
         }else if(counter <=9){
             expWidth = counter*10;
             if(lvlCount > 1){
                 lvlCount--;
-                lvlPopUpp(styles)
+                lvlPopUpp(styles);
+                lvlDownSound.play();
             }
-            expAmount.style.width = `${expWidth}%`;
         }
+        expAmount.style.width = `${expWidth}%`;
     }
 }
 

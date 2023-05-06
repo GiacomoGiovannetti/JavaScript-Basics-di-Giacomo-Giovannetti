@@ -25,7 +25,6 @@ buttons.forEach(function(btn){
             expWidth -= expWidth;
             lvlCount = 1; //lvlCount -= lvlCount (cambia concezione di partenze del primo livello)
         }
-
         expAmount.style.width = `${expWidth}%`;
 
         hideLvlPopUp();
@@ -33,10 +32,7 @@ buttons.forEach(function(btn){
         lvlUpByPlus1(styles);
         lvlDownByMinus10(styles , counter);
         lvlDownByMinus1(styles , counter);
-        
 
         lvlValue.textContent = lvlCount;
     })
 })
-
-
