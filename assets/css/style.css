@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,6 +6,7 @@
 }
 
 body {
+  font-family: "Rubik Glitch", cursive;
   background-color: #DADADA;
   color: #121412;
   height: 100vh;
@@ -14,19 +16,19 @@ body {
 }
 
 #container {
-  border: 1px solid #78A582;
-  height: 50vh;
+  border: 3px solid #004A52;
+  height: 90vh;
   width: 85vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.4);
 }
 #container h1 {
   text-align: center;
   font-size: 3rem;
 }
 #container #value-exp-container {
-  border: 1px solid #78A582;
   margin: 0 1rem;
   display: flex;
   flex-direction: column;
@@ -34,7 +36,6 @@ body {
   align-items: center;
 }
 #container #value-exp-container #value-container {
-  border: 1px solid #78A582;
   height: 25vh;
   width: 90%;
   margin: 1rem;
@@ -45,15 +46,22 @@ body {
 }
 #container #value-exp-container #value-container #value {
   text-align: center;
-  font-size: 5rem;
+  font-size: 6rem;
 }
 #container #value-exp-container #lvl-pop-up-container {
-  border: 1px solid #78A582;
+  border: 2px dashed #004A52;
+  border-radius: 1rem;
+  padding: 1rem;
   display: none;
+  position: relative;
+  z-index: 2;
+  top: 3rem;
+  font-size: 2.3rem;
 }
 #container #value-exp-container #exp-container {
-  width: 80%;
-  border: 1px solid #78A582;
+  width: 90%;
+  height: auto;
+  border: 2px solid #004A52;
   border-radius: 1rem;
   margin: 1rem;
   margin-top: 0.5rem;
@@ -65,14 +73,13 @@ body {
 #container #value-exp-container #exp-container #exp-bar {
   width: 90%;
   height: 100%;
-  border: 1px solid black;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
 #container #value-exp-container #exp-container #exp-bar #exp {
   width: 0%;
   height: 100%;
-  background-color: blue;
+  background-color: #002152;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
@@ -80,25 +87,77 @@ body {
   order: -1;
   width: 10%;
   height: 100%;
-}
-#container #value-exp-container #exp-container #lvl-container #lvl-value {
+  border-right: 1px solid #004A52;
   text-align: center;
 }
+#container #value-exp-container #exp-container #lvl-container #lvl-value {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
 #container #btn-container {
-  border: 1px solid #78A582;
   margin: 1rem;
   padding: 0.5rem 1rem;
+  height: auto;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
   justify-content: space-around;
 }
 #container #btn-container .btn {
-  border: 2.5px solid #78A582;
+  border: 2.5px solid #004A52;
   padding: 0.5rem;
   border-radius: 0.5rem;
+  width: 4rem;
+  text-align: center;
   cursor: pointer;
   font-weight: 600;
   font-size: 1.5rem;
 }
-#container #btn-container #incr-10 {
+#container #btn-container .btn:hover {
+  background-color: #c1c1c1;
+}
+#container #btn-container #increment-btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+#container #btn-container #increment-btn-container #incr-10 {
   order: 1;
+  max-width: 50%;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(68, 153, 19, 0.801);
+}
+#container #btn-container #increment-btn-container #increment {
+  max-width: 50%;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(68, 153, 19, 0.801);
+}
+#container #btn-container #reset {
+  align-self: center;
+  width: 50%;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+#container #btn-container #decrement-btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+#container #btn-container #decrement-btn-container #btn-10 {
+  max-width: 50%;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(160, 3, 3, 0.664);
+}
+#container #btn-container #decrement-btn-container #decrement {
+  max-width: 50%;
+  order: -1;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(160, 3, 3, 0.664);
+}
+
+@media only screen and (min-width: 501px) and (max-width: 1060px) {
+  html {
+    font-size: 24px;
+  }
+  #container #value-exp-container #lvl-pop-up-container {
+    top: 1rem;
+  }
+  #container #btn-container .btn {
+    width: 5.5rem;
+  }
 }

@@ -31,19 +31,6 @@ const value = document.createElement('p');
     valueContainer.appendChild(value);
     value.setAttribute('id', 'value');
 
-// lvl pop-up container
-
-const lvlPopUpContainer = document.createElement('div');
-    innerContainer.appendChild(lvlPopUpContainer);
-    lvlPopUpContainer.setAttribute('id', 'lvl-pop-up-container');
-
-//lvl pop-up
-
-const lvlPopUp = document.createElement('p');
-    lvlPopUpContainer.appendChild(lvlPopUp);
-    lvlPopUp.textContent='prova';
-    lvlPopUp.setAttribute('id', 'lvl-pop-up');
-
 //creazione contenitore Exp 
 
 const expContainer = document.createElement('div');
@@ -69,6 +56,21 @@ const lvl= document.createElement('p');
     lvlContainer.appendChild(lvl);
     lvl.setAttribute('id', 'lvl-value');
 
+// lvl pop-up container
+
+const lvlPopUpContainer = document.createElement('div');
+    innerContainer.appendChild(lvlPopUpContainer);
+    lvlPopUpContainer.setAttribute('id', 'lvl-pop-up-container');
+
+//lvl pop-up
+
+const lvlPopUp = document.createElement('p');
+    lvlPopUpContainer.appendChild(lvlPopUp);
+    lvlPopUp.textContent='LEVEL DOWN!';
+    lvlPopUp.setAttribute('id', 'lvl-pop-up');
+
+
+
 //creazione container pulsanti
 const btnContainer= document.createElement('div'); 
     container.appendChild(btnContainer);
@@ -76,8 +78,12 @@ const btnContainer= document.createElement('div');
 
 //creazione pulsanti decremento
 
+const decrementBtnContainer = document.createElement('div');
+    btnContainer.appendChild(decrementBtnContainer);
+    decrementBtnContainer.setAttribute('id', 'decrement-btn-container');
+
 const btnDecrement10 = document.createElement('div');
-    btnContainer.appendChild(btnDecrement10);
+    decrementBtnContainer.appendChild(btnDecrement10);
     btnDecrement10.setAttribute('class', 'btn');
     btnDecrement10.setAttribute('id', 'btn-10');
 const valueBtnDecrement10 = document.createElement('p');
@@ -85,7 +91,7 @@ const valueBtnDecrement10 = document.createElement('p');
     btnDecrement10.appendChild(valueBtnDecrement10);
 
 const btnDecrement1 = document.createElement('div');
-    btnContainer.appendChild(btnDecrement1);
+    decrementBtnContainer.appendChild(btnDecrement1);
     btnDecrement1.setAttribute('class', 'btn');
     btnDecrement1.setAttribute('id', 'decrement');
 const valueBtnDecrement1 = document.createElement('p');
@@ -104,8 +110,12 @@ const valueBtnReset = document.createElement('p');
 
 //creazione pulsanti incremento
 
+const incrementBtnContainer = document.createElement('div');
+    btnContainer.appendChild(incrementBtnContainer);
+    incrementBtnContainer.setAttribute('id', 'increment-btn-container');
+
 const btnIncrement10 = document.createElement('div');
-    btnContainer.appendChild(btnIncrement10);
+    incrementBtnContainer.appendChild(btnIncrement10);
     btnIncrement10.setAttribute('class', 'btn');
     btnIncrement10.setAttribute('id', 'incr-10');
 const valueBtnIncrement10 = document.createElement('p');
@@ -113,9 +123,14 @@ const valueBtnIncrement10 = document.createElement('p');
     btnIncrement10.appendChild(valueBtnIncrement10);
 
 const btnIncrement1 = document.createElement('div');
-    btnContainer.appendChild(btnIncrement1);
+    incrementBtnContainer.appendChild(btnIncrement1);
     btnIncrement1.setAttribute('class', 'btn');
     btnIncrement1.setAttribute('id', 'increment');
 const valueBtnIncrement1 = document.createElement('p');
     valueBtnIncrement1.textContent= '+1';
     btnIncrement1.appendChild(valueBtnIncrement1);
+
+
+//disattivo evidenziazione
+
+body.addEventListener('selectstart', e => e.preventDefault());

@@ -1,0 +1,22 @@
+@media only screen and (min-width: 501px) and (max-width: 1060px){
+    html{
+        font-size: 24px;
+    }
+
+    #container{
+
+        #value-exp-container{
+
+            #lvl-pop-up-container{
+                top: 1rem;
+            }
+        }
+
+        #btn-container{
+
+            .btn{
+                width: 5.5rem;
+            }
+        }
+    }
+}
