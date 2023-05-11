@@ -66,7 +66,6 @@ const lvlPopUpContainer = document.createElement('div');
 
 const lvlPopUp = document.createElement('p');
     lvlPopUpContainer.appendChild(lvlPopUp);
-    lvlPopUp.textContent='LEVEL DOWN!';
     lvlPopUp.setAttribute('id', 'lvl-pop-up');
 
 
