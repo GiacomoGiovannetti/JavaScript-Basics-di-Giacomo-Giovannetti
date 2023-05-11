@@ -61,7 +61,6 @@ body{
             padding: 1rem;
             display: none;
             position: relative;
-            z-index: 2;
             top: 3rem;
             font-size: 2.3rem;
         }
@@ -77,6 +76,7 @@ body{
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            box-shadow:  0.5rem 0.5rem 1rem $shadow;
 
 
             #exp-bar{
@@ -86,11 +86,13 @@ body{
                 border-bottom-right-radius: 1rem;
 
                 #exp{
+                    transition: 0.2s ease-in;
                     width: 0%;
                     height:100%;
                     background-color: #002152;
                     border-top-right-radius: 1rem;
                     border-bottom-right-radius: 1rem;
+                    
                 }
             }
 
@@ -98,8 +100,8 @@ body{
                 order: -1;
                 width:10%;
                 height:100%;
-                border-right: 1px solid $border-color;
                 text-align: center;
+                border-right: 1px solid $border-color;
 
                 #lvl-value{
                     font-size: 1.2rem;
@@ -133,7 +135,7 @@ body{
             //transform
 
             &:hover{
-                background-color: darken($color: $primary-color, $amount: 10%);
+                background-color: darken($color: $primary-color, $amount: 20%);
             }
         }
 

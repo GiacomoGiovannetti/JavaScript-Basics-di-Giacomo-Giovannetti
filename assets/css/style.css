@@ -54,7 +54,6 @@ body {
   padding: 1rem;
   display: none;
   position: relative;
-  z-index: 2;
   top: 3rem;
   font-size: 2.3rem;
 }
@@ -69,6 +68,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.4);
 }
 #container #value-exp-container #exp-container #exp-bar {
   width: 90%;
@@ -77,6 +77,7 @@ body {
   border-bottom-right-radius: 1rem;
 }
 #container #value-exp-container #exp-container #exp-bar #exp {
+  transition: 0.2s ease-in;
   width: 0%;
   height: 100%;
   background-color: #002152;
@@ -87,8 +88,8 @@ body {
   order: -1;
   width: 10%;
   height: 100%;
-  border-right: 1px solid #004A52;
   text-align: center;
+  border-right: 1px solid #004A52;
 }
 #container #value-exp-container #exp-container #lvl-container #lvl-value {
   font-size: 1.2rem;
@@ -114,7 +115,7 @@ body {
   font-size: 1.5rem;
 }
 #container #btn-container .btn:hover {
-  background-color: #c1c1c1;
+  background-color: #a7a7a7;
 }
 #container #btn-container #increment-btn-container {
   display: flex;
@@ -159,5 +160,60 @@ body {
   }
   #container #btn-container .btn {
     width: 5.5rem;
+  }
+}
+@media only screen and (min-width: 1061px) {
+  html {
+    font-size: 24px;
+  }
+  #container #value-exp-container #lvl-pop-up-container {
+    top: 1.5rem;
+  }
+  #container #btn-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #container #btn-container #increment-btn-container {
+    margin-bottom: 0rem;
+    width: 29%;
+  }
+  #container #btn-container #increment-btn-container #decrement-btn-container #decrement:hover, #container #btn-container #decrement-btn-container #increment-btn-container #decrement:hover, #container #btn-container #increment-btn-container #decrement-btn-container #btn-10:hover, #container #btn-container #decrement-btn-container #increment-btn-container #btn-10:hover, #container #btn-container #increment-btn-container #increment:hover, #container #btn-container #increment-btn-container #incr-10:hover {
+    box-shadow: 0.5rem 0.5rem 1rem rgba(68, 153, 19, 0.801);
+    background-color: rgba(68, 153, 19, 0.801);
+    transform: scale(1.1);
+  }
+  #container #btn-container #increment-btn-container #incr-10 {
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    transition: 0.5s ease-in;
+  }
+  #container #btn-container #increment-btn-container #increment {
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    transition: 0.5s ease-in;
+  }
+  #container #btn-container #reset {
+    width: 30%;
+    transition: 0.5s ease-in;
+  }
+  #container #btn-container #reset:hover {
+    transform: scale(1.1);
+  }
+  #container #btn-container #decrement-btn-container {
+    margin-top: 0rem;
+    width: 29%;
+  }
+  #container #btn-container #decrement-btn-container #decrement:hover, #container #btn-container #decrement-btn-container #btn-10:hover, #container #btn-container #decrement-btn-container #increment-btn-container #incr-10:hover, #container #btn-container #increment-btn-container #decrement-btn-container #incr-10:hover, #container #btn-container #decrement-btn-container #increment-btn-container #increment:hover, #container #btn-container #increment-btn-container #decrement-btn-container #increment:hover {
+    box-shadow: 0.5rem 0.5rem 1rem rgba(160, 3, 3, 0.664);
+    background-color: rgba(160, 3, 3, 0.664);
+    transform: scale(1.1);
+  }
+  #container #btn-container #decrement-btn-container #btn-10 {
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    transition: 0.5s ease-in;
+  }
+  #container #btn-container #decrement-btn-container #decrement {
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    transition: 0.5s ease-in;
   }
 }

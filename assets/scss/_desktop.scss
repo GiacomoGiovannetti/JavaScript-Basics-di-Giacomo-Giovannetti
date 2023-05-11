@@ -1,3 +1,94 @@
 @media only screen and (min-width: 1061px){
-    
+    html{
+        font-size : 24px;
+    }
+
+    #container{
+
+        #value-exp-container{
+
+            #lvl-pop-up-container{
+                top: 1.5rem;
+            }
+        }
+
+        #btn-container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            #increment-btn-container{
+                margin-bottom: 0rem;
+                width: 29%;
+
+                %btn-animation{
+                    box-shadow:  0.5rem 0.5rem 1rem $btn-plus-shadow;
+                    background-color: rgba(68, 153, 19, 0.801);
+                    transform: scale(1.1);
+                }
+
+
+                #incr-10{
+                    box-shadow: 0.5rem 0.5rem 1rem $btn-shadow;
+                    transition: 0.5s ease-in ;
+
+                    &:hover{
+                        @extend %btn-animation;
+                    }
+                }
+
+
+                #increment{
+                    box-shadow: 0.5rem 0.5rem 1rem $btn-shadow;
+                    transition: 0.5s ease-in;
+
+                    &:hover{
+                        @extend %btn-animation;
+                    }
+                }
+
+            }
+
+            #reset{
+                width: 30%;
+                transition: 0.5s ease-in;
+
+                &:hover{
+                    transform: scale(1.1);
+                }
+
+            }
+
+            #decrement-btn-container{
+                margin-top: 0rem;
+                width: 29%;
+
+                %btn-animation{
+                    box-shadow:  0.5rem 0.5rem 1rem $btn-minus-shadow;
+                    background-color: rgba(160, 3, 3, 0.664);
+                    transform: scale(1.1);
+                }
+
+                #btn-10{
+                    box-shadow: 0.5rem 0.5rem 1rem $btn-shadow;
+                    transition: 0.5s ease-in;
+
+                    &:hover{
+                        @extend %btn-animation;
+                    }
+                }
+
+                #decrement{
+                    box-shadow: 0.5rem 0.5rem 1rem $btn-shadow;
+                    transition: 0.5s ease-in;
+
+                    &:hover{
+                        @extend %btn-animation;
+                    }
+                }
+
+            }
+        }
+    }
 }
