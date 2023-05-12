@@ -5,130 +5,90 @@ const body = document.body;
 const section = document.createElement('section');
     body.appendChild(section);
 
-// creazione contenitore counter con titolo
+//dichiaro funzioni per creazione Elementi html 
 
-const container = document.createElement('div');
-    section.appendChild(container);
-    container.setAttribute('id' ,'container');
+function createDiv(nome, parent, id){
+    nome = document.createElement('div');
+    parent.appendChild(nome); 
+    nome.setAttribute('id', `${id}`);
+    return nome;
+}
+
+function createP(nome, parent , id, text){
+    nome = document.createElement('p');
+    parent.appendChild(nome);
+    nome.setAttribute('id', `${id}`);
+    nome.textContent = `${text}`;
+}
+
+function createBtn(nome, parent, id, classSelector){
+    nome = document.createElement('div');
+    parent.appendChild(nome); 
+    nome.setAttribute('id', `${id}`);
+    nome.setAttribute('class', `${classSelector}`);
+    return nome;
+}
+
+//dichiaro container counter e titolo
+
+const container = createDiv('container', section , 'container');
 
 const title = document.createElement('h1');
     title.textContent = 'EXP Counter';
     container.appendChild(title);
 
-//creazione contenitore exp e Value
-const innerContainer = document.createElement('div');
-    container.appendChild(innerContainer);
-    innerContainer.setAttribute('id', 'value-exp-container');
+//creazione contenitore exp e value 
 
-//creazione contenitore valore e  paragrafo valore
+const containerValueExp = createDiv('containerValueExp', container , 'value-exp-container');
 
-const valueContainer = document.createElement('div');
-    innerContainer.appendChild(valueContainer);
-    valueContainer.setAttribute('id', 'value-container');
+//creazione value container e paragrafo value
 
-const value = document.createElement('p');
-    value.textContent = '0';
-    valueContainer.appendChild(value);
-    value.setAttribute('id', 'value');
+const valueContainer = createDiv('valueContainer', containerValueExp, 'value-container');
+const value = createP('value', valueContainer, 'value', '0')
 
 //creazione contenitore Exp 
 
-const expContainer = document.createElement('div');
-    innerContainer.appendChild(expContainer);
-    expContainer.setAttribute('id', 'exp-container');
+const expContainer = createDiv('expContainer', containerValueExp, 'exp-container');
 
-//creazione barra exp e livello 
+//creazione barraExp e livello 
 
-const expBar = document.createElement('div');
-    expContainer.appendChild(expBar);
-    expBar.setAttribute('id', 'exp-bar')
+const expBar = createDiv('expBar', expContainer, 'exp-bar');
+const exp = createDiv('exp', expBar, 'exp');
+const lvlContainer = createDiv('lvlContainer', expContainer, 'lvl-container');
+const lvl = createP('lvl', lvlContainer, 'lvl-value', '0');
 
-const exp = document.createElement('div');
-    expBar.appendChild(exp);
-    exp.setAttribute('id', 'exp')
-
-const lvlContainer= document.createElement('div');
-    expContainer.appendChild(lvlContainer);
-    lvlContainer.setAttribute('id', 'lvl-container');
-
-const lvl= document.createElement('p');
-    lvl.textContent= '0';
-    lvlContainer.appendChild(lvl);
-    lvl.setAttribute('id', 'lvl-value');
-
-// lvl pop-up container
-
-const lvlPopUpContainer = document.createElement('div');
-    innerContainer.appendChild(lvlPopUpContainer);
-    lvlPopUpContainer.setAttribute('id', 'lvl-pop-up-container');
-
-//lvl pop-up
-
-const lvlPopUp = document.createElement('p');
-    lvlPopUpContainer.appendChild(lvlPopUp);
-    lvlPopUp.setAttribute('id', 'lvl-pop-up');
-
-
+//lvl pop-up container and lvl pop-up
+const lvlPopUpContainer = createDiv('lvlPopUpContainer', containerValueExp, 'lvl-pop-up-container');
+const lvlPopUp = createP('lvlPopUp', lvlPopUpContainer, 'lvl-pop-up');
 
 //creazione container pulsanti
-const btnContainer= document.createElement('div'); 
-    container.appendChild(btnContainer);
-    btnContainer.setAttribute('id', 'btn-container');
+
+const btnContainer = createDiv('btnContainer', container , 'btn-container');
 
 //creazione pulsanti decremento
 
-const decrementBtnContainer = document.createElement('div');
-    btnContainer.appendChild(decrementBtnContainer);
-    decrementBtnContainer.setAttribute('id', 'decrement-btn-container');
+const decrementBtnContainer = createDiv('decrementBtnContainer', btnContainer, 'decrement-btn-container');
 
-const btnDecrement10 = document.createElement('div');
-    decrementBtnContainer.appendChild(btnDecrement10);
-    btnDecrement10.setAttribute('class', 'btn');
-    btnDecrement10.setAttribute('id', 'btn-10');
-const valueBtnDecrement10 = document.createElement('p');
-    valueBtnDecrement10.textContent= '-10'; 
-    btnDecrement10.appendChild(valueBtnDecrement10);
+const btnDecrement10 = createBtn('btnDecrement10' , decrementBtnContainer , 'btn-10', 'btn');
+const valueBtnDecrement10 = createP('valueBtnDecrement10', btnDecrement10, 'value-btn-10', '-10');
 
-const btnDecrement1 = document.createElement('div');
-    decrementBtnContainer.appendChild(btnDecrement1);
-    btnDecrement1.setAttribute('class', 'btn');
-    btnDecrement1.setAttribute('id', 'decrement');
-const valueBtnDecrement1 = document.createElement('p');
-    valueBtnDecrement1.textContent='-1';
-    btnDecrement1.appendChild(valueBtnDecrement1);
+const btnDecrement1 = createBtn('btnDecrement1', decrementBtnContainer, 'decrement', 'btn');
+const valueBtnDecrement1 = createP('valueBtnDecrement1', btnDecrement1, 'value-btn-decrement', '-1')
 
 //creazione pulsante reset
 
-const btnReset = document.createElement('div'); 
-    btnContainer.appendChild(btnReset);
-    btnReset.setAttribute('class', 'btn');
-    btnReset.setAttribute('id', 'reset');
-const valueBtnReset = document.createElement('p'); 
-    valueBtnReset.textContent = 'Reset';
-    btnReset.appendChild(valueBtnReset);
+const btnReset = createBtn('btnReset', btnContainer, 'reset', 'btn');
+const valueBtnReset = createP('valueBtn', btnReset, 'btn-reset', 'reset');
 
 //creazione pulsanti incremento
 
-const incrementBtnContainer = document.createElement('div');
-    btnContainer.appendChild(incrementBtnContainer);
-    incrementBtnContainer.setAttribute('id', 'increment-btn-container');
+const incrementBtnContainer = createDiv('incrementBtnContainer', btnContainer, 'increment-btn-container');
 
-const btnIncrement10 = document.createElement('div');
-    incrementBtnContainer.appendChild(btnIncrement10);
-    btnIncrement10.setAttribute('class', 'btn');
-    btnIncrement10.setAttribute('id', 'incr-10');
-const valueBtnIncrement10 = document.createElement('p');
-    valueBtnIncrement10.textContent = '+10';
-    btnIncrement10.appendChild(valueBtnIncrement10);
+const btnIncrement10 = createBtn('btnIncrement10', incrementBtnContainer, 'incr-10', 'btn');
+const valueBtnIncrement10 = createP('valueBtnIncrement10', btnIncrement10, 'value-btn-incr-10', '+10');
 
-const btnIncrement1 = document.createElement('div');
-    incrementBtnContainer.appendChild(btnIncrement1);
-    btnIncrement1.setAttribute('class', 'btn');
-    btnIncrement1.setAttribute('id', 'increment');
-const valueBtnIncrement1 = document.createElement('p');
-    valueBtnIncrement1.textContent= '+1';
-    btnIncrement1.appendChild(valueBtnIncrement1);
-
+const btnIncrement1 = createBtn('btnIncrement1', incrementBtnContainer, 'increment', 'btn');
+const valueBtnIncrement1 = createP('valueBtnIncrement1', btnIncrement1, 'value-btn-increment', '+1');
 
 //disattivo evidenziazione
 
