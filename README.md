@@ -1,6 +1,6 @@
 
 # Experience-Counter
-## JavaScript-Basics-di-Giacomo-Giovannetti
+## Javascript Basics Project by Giacomo Giovannetti
 ### A Counter with an experience bar that grows with the value of the counter. 
 
 ## Index: 
