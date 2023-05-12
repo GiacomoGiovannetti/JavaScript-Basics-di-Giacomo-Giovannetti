@@ -6,8 +6,9 @@
 ## Index: 
 * [About the project](#about-the-project)
 * [Built with](#Built-with)
-* [Contact](#contact)
 * [Issues](#issues)
+* [Contact](#contact)
+
 
 ## About- the-project
 
@@ -24,7 +25,7 @@ The idea i had while i was thinking about the project was to realize a counter w
 
 As soon as you land in the page the counter displays: 
  * value = 0 
- * Experience = 0 
+ * Experience = 0%
  * Level = 1
  * The buttons : -10 ~ -1 ~ Reset ~ +1 ~ +10;
 
@@ -33,18 +34,18 @@ As soon as you land in the page the counter displays:
  For the buttons i decided to add the -10/+10 options just to progress faster. In fact with those buttons you will go a full level above or a full level down. 
 
  I also implemented little animations and sound effects for the buttons: 
-    * Animations : they are very simple, and avaible only on desktop layout. Once you hover a button it will scale up a bit and change background-color e box-shadow-color depending on the value of the buttons : Green for the positives, Gray for the reset and Red for the negatives.
+ * Animations : they are very simple, and avaible only on desktop layout. Once you hover a button it will scale up a bit and change background-color e box-shadow-color depending on the value of the buttons : Green for the positives, Gray for the reset and Red for the negatives.
 
-    * Sound effects : I implemented 3 sound effects : the first one plays every time a button is click, the second one every time a level-up verifies and the third one every time a level-down verifies.
+ * Sound effects : I implemented 3 sound effects : the first one plays every time a button is click, the second one every time a level-up verifies and the third one every time a level-down verifies.
 
 Since the animations doesn't work in the mobile design i decided to set the box-shadow of the buttons to green for the positive ones and to red for the negative ones
 
 The counter value can't go below 0. 
 
 ## Built with
-* [![Html][Html5]][Html-url]
-* [![Sass][Sass]][Sass-url]
-* [![Javascript][Javascript]][Javascript-url]
+* [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [Sass](https://sass-lang.com/documentation/)
+* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * The Web app is deployed with [GitHub Pages](https://pages.github.com/)
 
 ## Issues
@@ -52,6 +53,6 @@ The counter value can't go below 0.
 I'm aware that the content jumps when the level up message is display, i could found a solution to this other than setting it to "position:absolute" but i'm not satisfied with this solution. I'm still working on it to resolve the issue.
 ## Contact
 
-Giacomo Giovannetti [Linkedin](https://www.linkedin.com/in/giacomogiovannetti/)
+Giacomo Giovannetti: [Linkedin](https://www.linkedin.com/in/giacomogiovannetti/)
 
-Giacomo Giovannetti [Personal-Website](https://giacomogiovannetti.github.io/)
+Giacomo Giovannetti: [Personal-Website](https://giacomogiovannetti.github.io/)
