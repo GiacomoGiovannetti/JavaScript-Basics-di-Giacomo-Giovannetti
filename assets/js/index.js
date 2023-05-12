@@ -78,7 +78,7 @@ const valueBtnDecrement1 = createP('valueBtnDecrement1', btnDecrement1, 'value-b
 //creazione pulsante reset
 
 const btnReset = createBtn('btnReset', btnContainer, 'reset', 'btn');
-const valueBtnReset = createP('valueBtn', btnReset, 'btn-reset', 'reset');
+const valueBtnReset = createP('valueBtn', btnReset, 'btn-reset', 'Reset');
 
 //creazione pulsanti incremento
 
