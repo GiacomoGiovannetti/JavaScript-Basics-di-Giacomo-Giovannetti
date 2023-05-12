@@ -1,6 +1,6 @@
 
-# Experience-Counter
-## JavaScript-Basics-di-Giacomo-Giovannetti
+# Experience Counter
+## Javascript Basics Project by Giacomo Giovannetti
 ### A Counter with an experience bar that grows with the value of the counter. 
 
 ## Index: 
@@ -8,16 +8,16 @@
 * [Built with](#Built-with)
 * [Issues](#issues)
 * [Contact](#contact)
+* [Issues](#issues)
 
-
-## About- the-project
+## About the project
 
 This is a project realized for [Start2Impact's](https://www.start2impact.it/) -Javascript Basics- module of the Full Stack Web Developer course. For this project i had to build: 
 * A web app that displayed a counter 
 * The counter had to have the value of the counter and the buttons to increment, decrement and reset the value
 * i had to implement a function that on every time the user clicks a button would increment/decrement or reset the value depending on the button clicked. 
 
-** My idea: **
+### My idea: 
 The idea i had while i was thinking about the project was to realize a counter with an Experience bar attached to it, almost like it was part of a videogame, with the difference that you could gain experience just by clicking the buttons, and when the experience bar is full you will level up, and as soon as you do so there will be displayed a message such as : "LEVEL UP!/LEVEL DOWN!". 
 
 ### [That's my Project: ](https://giacomogiovannetti.github.io/JavaScript-Basics-di-Giacomo-Giovannetti/)
@@ -42,6 +42,8 @@ Since the animations doesn't work in the mobile design i decided to set the box-
 
 The counter value can't go below 0. 
 
+The font i decided to go with is Audiowide, i picked this one because it has a technological and futuristic style which blends pretty well with my initial idea. The choice of the font had a big role from my prospective beacuse it could remind more the videogame related nature of the project to the user.
+
 ## Built with
 * [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [Sass](https://sass-lang.com/documentation/)
@@ -55,4 +57,4 @@ I'm aware that the content jumps when the level up message is display, i could f
 
 Giacomo Giovannetti: [Linkedin](https://www.linkedin.com/in/giacomogiovannetti/)
 
-Giacomo Giovannetti: [Personal-Website](https://giacomogiovannetti.github.io/)
+Giacomo Giovannetti [Personal-Website](https://giacomogiovannetti.github.io/)
