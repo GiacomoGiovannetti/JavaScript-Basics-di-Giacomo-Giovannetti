@@ -41,6 +41,8 @@ Since the animations doesn't work in the mobile design i decided to set the box-
 
 The counter value can't go below 0. 
 
+The font i decided to go with is Audiowide, i picked this one because it has a technological and futuristic style which blends pretty well with my initial idea. The choice of the font had a big role from my prospective beacuse it could remind more the videogame related nature of the project to the user.
+
 ## Built with
 * [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [Sass](https://sass-lang.com/documentation/)
