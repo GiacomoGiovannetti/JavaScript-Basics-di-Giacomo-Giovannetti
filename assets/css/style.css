@@ -151,7 +151,7 @@ body {
   box-shadow: 0.5rem 0.5rem 1rem rgba(160, 3, 3, 0.664);
 }
 
-@media only screen and (min-width: 501px) and (max-width: 1060px) {
+@media only screen and (min-width: 601px) and (max-width: 1060px) {
   html {
     font-size: 24px;
   }
