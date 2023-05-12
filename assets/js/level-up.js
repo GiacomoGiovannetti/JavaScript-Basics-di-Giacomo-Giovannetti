@@ -1,6 +1,8 @@
 let lvlUpSound = new Audio('assets/audio/oh-yes.mp3');
 let lvlDownSound = new Audio('assets/audio/oh-no.mp3');
 
+
+//dichiarazione funzione per il level up attraverso il pulsante +1 e sound effect level up
 function lvlUpByPlus1(styles){
     if(expWidth > 100 && styles.includes('increment')){
         expWidth -= expWidth;
@@ -12,6 +14,7 @@ function lvlUpByPlus1(styles){
     }
 }
 
+//dichirazione funzione per il level up attraverso il pulsante +10 e sound effect level up
 function lvlUpByPlus10(styles){
     if(styles.includes('incr-10') && expWidth >= 110 && expWidth <= 190){
         let previousExp = expWidth ; 
@@ -35,6 +38,8 @@ function lvlUpByPlus10(styles){
     }
 }
 
+
+//dichiarazione funzione per il level down attravarso il pulsante -1 e sound effect level down
 function lvlDownByMinus1(styles , counter){
     if(styles.includes('decrement')){
         if(counter == 0){
@@ -58,6 +63,7 @@ function lvlDownByMinus1(styles , counter){
     } 
 }
 
+//dichiarazione funzione per il level down attraverso il pulsante -10 e sound effect level down
 function lvlDownByMinus10(styles , counter){
     if(styles.includes('btn-10')){
         if(counter >= 10){
@@ -80,6 +86,7 @@ function lvlDownByMinus10(styles , counter){
     }
 }
 
+//dichiarazione funzione per mostrare il messaggio level up/down  
 function lvlPopUpp(styles){
     if(styles.includes('increment') || styles.includes('incr-10')){
         lvlPopUpValue.textContent ='LEVEL UP!';
@@ -90,6 +97,7 @@ function lvlPopUpp(styles){
     }
 }
 
+//dichiarazione funzione per nascondere il messaggio di level-up/down
 function hideLvlPopUp(){
     if(lvlPopUpDisplay.style.display == 'block'){
         lvlPopUpDisplay.style.display = 'none';

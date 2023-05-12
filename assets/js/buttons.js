@@ -4,7 +4,8 @@ let clickSound = new Audio('assets/audio/swoosh.mp3');
 
 let count = 0; 
 
-//Dichiarazione funzione di incremento/decremento/reset al click dei pulsanti 
+/*Dichiarazione funzione di incremento/decremento/reset del valore del counter al 
+    click dei pulsanti e per sound effect al click dei pulsanti */
 
 buttons.forEach(function(btn) {
     btn.addEventListener('click', function(e){

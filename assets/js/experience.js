@@ -8,6 +8,8 @@ let expWidth = 0;
 
 lvlValue.textContent = lvlCount;
 
+//dichiarazione funzione di incremento/decremento/reset della barra dell'esperienza al click dei pulsanti 
+
 buttons.forEach(function(btn){
     btn.addEventListener('click', function(e){
         let counter = valore.textContent;
@@ -23,10 +25,11 @@ buttons.forEach(function(btn){
             expWidth-= 10;
         }else if(styles.includes('reset')){
             expWidth -= expWidth;
-            lvlCount = 1; //lvlCount -= lvlCount (cambia concezione di partenze del primo livello)
+            lvlCount = 1; //lvlCount -= lvlCount (cambia concezione di partenza del primo livello)
         }
         expAmount.style.width = `${expWidth}%`;
 
+        //funzioni per la barra dell'esperienza quando si verifica un level up/level down e per nascondere il pop-up
         hideLvlPopUp();
         lvlUpByPlus10(styles);
         lvlUpByPlus1(styles);

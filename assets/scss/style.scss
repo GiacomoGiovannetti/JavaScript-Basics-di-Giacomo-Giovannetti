@@ -17,6 +17,7 @@ body{
     align-items: center ;
 }
 
+//counter
 #container{
     border: 3px  solid $border-color;
     height: 90vh;
@@ -38,7 +39,8 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-            
+        
+        //value styling
         #value-container{
             //border: 1px solid $border-color;
             height: 25vh;
@@ -54,7 +56,9 @@ body{
                 font-size: 6rem;
             }
         }
+        //value styling end
 
+        //pop-up styling
         #lvl-pop-up-container{
             border: 2px dashed $border-color;
             border-radius: 1rem;
@@ -64,7 +68,9 @@ body{
             top: 3rem;
             font-size: 2.3rem;
         }
+        //pop-up styling end
 
+        //exp bar + level styling
         #exp-container{
             width: 90%;
             height: auto; 
@@ -109,8 +115,10 @@ body{
                 }
             }
         }
+        //exp bar + level styling end
     }
 
+    //btn styling
     #btn-container{
         //border: 1px solid $border-color;
         margin: 1rem; 
@@ -132,13 +140,14 @@ body{
                 weight: 600;
                 size: 1.5rem;
             }
-            //transform
 
             &:hover{
                 background-color: darken($color: $primary-color, $amount: 20%);
             }
         }
 
+
+        //increment button styling
         #increment-btn-container{
             display: flex;
             justify-content: space-between;
@@ -155,6 +164,7 @@ body{
                 box-shadow:  0.5rem 0.5rem 1rem $btn-plus-shadow;
             }
         }
+        //increment button styling end
 
         #reset{
             align-self: center;
@@ -162,6 +172,8 @@ body{
             box-shadow:  0.5rem 0.5rem 1rem $btn-shadow;
         }
 
+
+        //decrement button styling
         #decrement-btn-container{
             display: flex;
             justify-content: space-between;
@@ -178,8 +190,12 @@ body{
                 box-shadow:  0.5rem 0.5rem 1rem $btn-minus-shadow;
             }
         }
+        //decrement button styling end
     }
+    //btn styling end 
 }
 
+
+//Media queries
 @import "tablet";
 @import "desktop";

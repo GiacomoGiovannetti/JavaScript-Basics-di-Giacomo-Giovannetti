@@ -7,17 +7,21 @@
 
         #value-exp-container{
 
+            //pop up styling
             #lvl-pop-up-container{
                 top: 1.5rem;
             }
+            //pop-up styling end
         }
 
+        //button styling 
         #btn-container{
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
 
+            //increment button styling
             #increment-btn-container{
                 margin-bottom: 0rem;
                 width: 29%;
@@ -28,7 +32,6 @@
                     transform: scale(1.1);
                 }
 
-
                 #incr-10{
                     box-shadow: 0.5rem 0.5rem 1rem $btn-shadow;
                     transition: 0.5s ease-in ;
@@ -37,7 +40,6 @@
                         @extend %btn-animation;
                     }
                 }
-
 
                 #increment{
                     box-shadow: 0.5rem 0.5rem 1rem $btn-shadow;
@@ -49,6 +51,7 @@
                 }
 
             }
+            //increment button styling end
 
             #reset{
                 width: 30%;
@@ -60,6 +63,7 @@
 
             }
 
+            //decrement button styling
             #decrement-btn-container{
                 margin-top: 0rem;
                 width: 29%;
@@ -89,6 +93,8 @@
                 }
 
             }
+            //decrement button styling end
         }
+        //button styling end
     }
 }
