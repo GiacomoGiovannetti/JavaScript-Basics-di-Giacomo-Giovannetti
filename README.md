@@ -42,9 +42,9 @@ Since the animations doesn't work in the mobile design i decided to set the box-
 The counter value can't go below 0. 
 
 ## Built with
-* [![Html][Html5]][Html-url]
-* [![Sass][Sass]][Sass-url]
-* [![Javascript][Javascript]][Javascript-url]
+* [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [Sass](https://sass-lang.com/documentation/)
+* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * The Web app is deployed with [GitHub Pages](https://pages.github.com/)
 
 ## Issues
