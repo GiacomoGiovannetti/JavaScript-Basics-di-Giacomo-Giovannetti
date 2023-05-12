@@ -9,7 +9,7 @@
 * [Issues](#issues)
 * [Contact](#contact)
 
-## About- the-project
+## About the project
 
 This is a project realized for [Start2Impact's](https://www.start2impact.it/) -Javascript Basics- module of the Full Stack Web Developer course. For this project i had to build: 
 * A web app that displayed a counter 
