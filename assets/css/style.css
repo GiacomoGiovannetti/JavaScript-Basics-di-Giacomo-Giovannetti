@@ -52,7 +52,8 @@ body {
   border: 2px dashed #004A52;
   border-radius: 1rem;
   padding: 1rem;
-  display: none;
+  display: block;
+  visibility: hidden;
   position: relative;
   top: 3rem;
   font-size: 2.3rem;
@@ -153,7 +154,7 @@ body {
 
 @media only screen and (min-width: 601px) and (max-width: 1060px) {
   html {
-    font-size: 24px;
+    font-size: 21px;
   }
   #container #value-exp-container #lvl-pop-up-container {
     top: 1rem;

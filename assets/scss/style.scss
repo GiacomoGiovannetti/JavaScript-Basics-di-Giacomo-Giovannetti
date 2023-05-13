@@ -63,7 +63,8 @@ body{
             border: 2px dashed $border-color;
             border-radius: 1rem;
             padding: 1rem;
-            display: none;
+            display: block;
+            visibility: hidden;
             position: relative;
             top: 3rem;
             font-size: 2.3rem;

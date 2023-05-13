@@ -90,17 +90,17 @@ function lvlDownByMinus10(styles , counter){
 function lvlPopUpp(styles){
     if(styles.includes('increment') || styles.includes('incr-10')){
         lvlPopUpValue.textContent ='LEVEL UP!';
-        lvlPopUpDisplay.style.display = 'block';
+        lvlPopUpDisplay.style.visibility = 'visible';
     }else if(styles.includes('decrement') || styles.includes('btn-10')){
         lvlPopUpValue.textContent ='LEVEL DOWN!';
-        lvlPopUpDisplay.style.display = 'block';
+        lvlPopUpDisplay.style.visibility = 'visible';
     }
 }
 
 //dichiarazione funzione per nascondere il messaggio di level-up/down
 function hideLvlPopUp(){
-    if(lvlPopUpDisplay.style.display == 'block'){
-        lvlPopUpDisplay.style.display = 'none';
+    if(lvlPopUpDisplay.style.visibility == 'visible'){
+        lvlPopUpDisplay.style.visibility = 'hidden';
     }
 }
 
