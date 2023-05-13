@@ -36,7 +36,7 @@ body {
   align-items: center;
 }
 #container #value-exp-container #value-container {
-  height: 25vh;
+  height: 15vh;
   width: 90%;
   margin: 1rem;
   margin-bottom: 0.5rem;
@@ -53,9 +53,9 @@ body {
   border-radius: 1rem;
   padding: 1rem;
   display: block;
-  visibility: hidden;
+  visibility: visible;
   position: relative;
-  top: 3rem;
+  top: 0.5rem;
   font-size: 2.3rem;
 }
 #container #value-exp-container #exp-container {
@@ -156,6 +156,9 @@ body {
   html {
     font-size: 21px;
   }
+  #container #value-exp-container #value-container {
+    height: 25vh;
+  }
   #container #value-exp-container #lvl-pop-up-container {
     top: 1rem;
   }
@@ -166,6 +169,9 @@ body {
 @media only screen and (min-width: 1061px) {
   html {
     font-size: 24px;
+  }
+  #container #value-exp-container #value-container {
+    height: 25vh;
   }
   #container #value-exp-container #lvl-pop-up-container {
     top: 1.5rem;
