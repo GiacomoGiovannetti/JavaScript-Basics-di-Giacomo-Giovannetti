@@ -48,6 +48,7 @@ function lvlDownByMinus1(styles , counter){
             expWidth -= 10;
         }else if(expWidth <= 10 && counter >= 10){
             expWidth += 100;
+            expAmount.style.width = `${expWidth}`;
             if(expWidth == 100){
                 lvlCount--;
                 lvlPopUpp(styles);
@@ -59,7 +60,6 @@ function lvlDownByMinus1(styles , counter){
             lvlPopUpp(styles);
             lvlDownSound.play();
         }
-        expAmount.style.width = `${expWidth}`;
     } 
 }
 
