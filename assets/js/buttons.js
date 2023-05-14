@@ -47,7 +47,7 @@ buttons.forEach(function(btn) {
         }
         expAmount.style.width = `${expWidth}%`;
         valore.textContent = count ;
-
+        
         //funzioni per la barra dell'esperienza quando si verifica un level up/level down e per nascondere il pop-up
         hideLvlPopUp();
         lvlUpByPlus10(styles);

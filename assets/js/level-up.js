@@ -44,8 +44,6 @@ function lvlDownByMinus1(styles , counter){
     if(styles.includes('decrement')){
         if(counter == 0){
             expWidth = 0;
-        }else if(counter == 1){
-            expWidth -= 10;
         }else if(expWidth <= 10 && counter >= 10){
             expWidth += 100;
             expAmount.style.width = `${expWidth}`;
