@@ -11,35 +11,11 @@ function create(nome, tag, parent, id, text,  classSelector){
     parent.appendChild(nome);
     nome.setAttribute('id', `${id}`);
     nome.textContent = `${text}`;
-    if(classSelector){
+    if(classSelector){ //se è presente il parametro classSelector crea l'attributo class 
         nome.setAttribute('class', `${classSelector}`)
     }
     return nome;
 }
-
-//dichiaro funzioni per creazione Elementi html 
-
-// function createDiv(nome, parent, id){
-//     nome = document.createElement('div');
-//     parent.appendChild(nome); 
-//     nome.setAttribute('id', `${id}`);
-//     return nome;
-// }
-
-//  function createP(nome, parent , id, text){
-//      nome = document.createElement('p');
-//      parent.appendChild(nome);
-//      nome.setAttribute('id', `${id}`);
-//      nome.textContent = `${text}`;
-//  }
-
-// // function createBtn(nome, parent, id, classSelector){
-// //     nome = document.createElement('div');
-// //     parent.appendChild(nome); 
-// //     nome.setAttribute('id', `${id}`);
-// //     nome.setAttribute('class', `${classSelector}`);
-// //     return nome;
-// // }
 
 //dichiaro container counter e titolo
 
