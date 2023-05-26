@@ -5,90 +5,100 @@ const body = document.body;
 const section = document.createElement('section');
     body.appendChild(section);
 
-//dichiaro funzioni per creazione Elementi html 
-
-function createDiv(nome, parent, id){
-    nome = document.createElement('div');
-    parent.appendChild(nome); 
-    nome.setAttribute('id', `${id}`);
-    return nome;
-}
-
-function createP(nome, parent , id, text){
-    nome = document.createElement('p');
+//dichiaro funzione per creazione elementi 
+function create(nome, tag, parent, id, text,  classSelector){
+    nome = document.createElement(tag);
     parent.appendChild(nome);
     nome.setAttribute('id', `${id}`);
     nome.textContent = `${text}`;
-}
-
-function createBtn(nome, parent, id, classSelector){
-    nome = document.createElement('div');
-    parent.appendChild(nome); 
-    nome.setAttribute('id', `${id}`);
-    nome.setAttribute('class', `${classSelector}`);
+    if(classSelector){
+        nome.setAttribute('class', `${classSelector}`)
+    }
     return nome;
 }
 
+//dichiaro funzioni per creazione Elementi html 
+
+// function createDiv(nome, parent, id){
+//     nome = document.createElement('div');
+//     parent.appendChild(nome); 
+//     nome.setAttribute('id', `${id}`);
+//     return nome;
+// }
+
+//  function createP(nome, parent , id, text){
+//      nome = document.createElement('p');
+//      parent.appendChild(nome);
+//      nome.setAttribute('id', `${id}`);
+//      nome.textContent = `${text}`;
+//  }
+
+// // function createBtn(nome, parent, id, classSelector){
+// //     nome = document.createElement('div');
+// //     parent.appendChild(nome); 
+// //     nome.setAttribute('id', `${id}`);
+// //     nome.setAttribute('class', `${classSelector}`);
+// //     return nome;
+// // }
+
 //dichiaro container counter e titolo
 
-const container = createDiv('container', section , 'container');
+const container = create('container', 'div', section, 'container', '');
 
-const title = document.createElement('h1');
-    title.textContent = 'EXP Counter';
-    container.appendChild(title);
+const title= create('title', 'h1', container, '', 'EXP Counter', '');
 
 //creazione contenitore exp e value 
 
-const containerValueExp = createDiv('containerValueExp', container , 'value-exp-container');
+const containerValueExp = create('containerValueExp', 'div', container , 'value-exp-container', '');
 
 //creazione value container e paragrafo value
 
-const valueContainer = createDiv('valueContainer', containerValueExp, 'value-container');
-const value = createP('value', valueContainer, 'value', '0')
+const valueContainer = create('valueContainer','div', containerValueExp, 'value-container', '');
+const value = create('value', 'p', valueContainer, 'value', '0', '');
 
 //creazione contenitore Exp 
 
-const expContainer = createDiv('expContainer', containerValueExp, 'exp-container');
+const expContainer = create('expContainer','div', containerValueExp, 'exp-container', '');
 
 //creazione barraExp e livello 
 
-const expBar = createDiv('expBar', expContainer, 'exp-bar');
-const exp = createDiv('exp', expBar, 'exp');
-const lvlContainer = createDiv('lvlContainer', expContainer, 'lvl-container');
-const lvl = createP('lvl', lvlContainer, 'lvl-value', '0');
+const expBar = create('expBar','div', expContainer, 'exp-bar', '');
+const exp = create('exp','div', expBar, 'exp', '');
+const lvlContainer = create('lvlContainer','div', expContainer, 'lvl-container','');
+const lvl = create('lvl', 'p', lvlContainer, 'lvl-value', '0','');
 
 //lvl pop-up container and lvl pop-up
-const lvlPopUpContainer = createDiv('lvlPopUpContainer', containerValueExp, 'lvl-pop-up-container');
-const lvlPopUp = createP('lvlPopUp', lvlPopUpContainer, 'lvl-pop-up');
+const lvlPopUpContainer = create('lvlPopUpContainer','div', containerValueExp, 'lvl-pop-up-container', '');
+const lvlPopUp = create('lvlPopUp', 'p', lvlPopUpContainer, 'lvl-pop-up','');
 
 //creazione container pulsanti
 
-const btnContainer = createDiv('btnContainer', container , 'btn-container');
+const btnContainer = create('btnContainer','div', container , 'btn-container', ' ');
 
 //creazione pulsanti decremento
 
-const decrementBtnContainer = createDiv('decrementBtnContainer', btnContainer, 'decrement-btn-container');
+const decrementBtnContainer = create('decrementBtnContainer', 'div', btnContainer, 'decrement-btn-container','');
 
-const btnDecrement10 = createBtn('btnDecrement10' , decrementBtnContainer , 'btn-10', 'btn');
-const valueBtnDecrement10 = createP('valueBtnDecrement10', btnDecrement10, 'value-btn-10', '-10');
+const btnDecrement10 = create('btnDecrement10' , 'div', decrementBtnContainer , 'btn-10','', 'btn');
+const valueBtnDecrement10 = create('valueBtnDecrement10', 'p', btnDecrement10, 'value-btn-10', '-10');
 
-const btnDecrement1 = createBtn('btnDecrement1', decrementBtnContainer, 'decrement', 'btn');
-const valueBtnDecrement1 = createP('valueBtnDecrement1', btnDecrement1, 'value-btn-decrement', '-1')
+const btnDecrement1 = create('btnDecrement1', 'div', decrementBtnContainer, 'decrement','', 'btn');
+const valueBtnDecrement1 = create('valueBtnDecrement1', 'p', btnDecrement1, 'value-btn-decrement', '-1');
 
 //creazione pulsante reset
 
-const btnReset = createBtn('btnReset', btnContainer, 'reset', 'btn');
-const valueBtnReset = createP('valueBtn', btnReset, 'btn-reset', 'Reset');
+const btnReset = create('btnReset', 'div', btnContainer, 'reset','', 'btn');
+const valueBtnReset = create('valueBtn', 'p', btnReset, 'btn-reset', 'Reset');
 
 //creazione pulsanti incremento
 
-const incrementBtnContainer = createDiv('incrementBtnContainer', btnContainer, 'increment-btn-container');
+const incrementBtnContainer = create('incrementBtnContainer','div', btnContainer, 'increment-btn-container','');
 
-const btnIncrement10 = createBtn('btnIncrement10', incrementBtnContainer, 'incr-10', 'btn');
-const valueBtnIncrement10 = createP('valueBtnIncrement10', btnIncrement10, 'value-btn-incr-10', '+10');
+const btnIncrement10 = create('btnIncrement10', 'div', incrementBtnContainer, 'incr-10','', 'btn');
+const valueBtnIncrement10 = create('valueBtnIncrement10', 'p', btnIncrement10, 'value-btn-incr-10', '+10');
 
-const btnIncrement1 = createBtn('btnIncrement1', incrementBtnContainer, 'increment', 'btn');
-const valueBtnIncrement1 = createP('valueBtnIncrement1', btnIncrement1, 'value-btn-increment', '+1');
+const btnIncrement1 = create('btnIncrement1', 'div', incrementBtnContainer, 'increment','', 'btn');
+const valueBtnIncrement1 = create('valueBtnIncrement1', 'p', btnIncrement1, 'value-btn-increment', '+1');
 
 //disattivo evidenziazione
 
