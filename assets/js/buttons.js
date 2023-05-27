@@ -20,7 +20,6 @@ lvlValue.textContent = lvlCount;
 
 buttonsContainer.addEventListener('click', function(e){
     const styles = e.target.id;
-    console.log(styles);
          if(styles.includes('btn-10')){
              if(count <= 9){
                  count = 0; 
@@ -28,10 +27,12 @@ buttonsContainer.addEventListener('click', function(e){
                  count-= 10;
              }
              expWidth-= 100;
+             clickSound.play();
          } 
         else if(styles.includes('decrement') && count > 0 ){
              count--;
              expWidth-= 10;
+             clickSound.play();
          }
          else if(styles.includes('incr-10')){
              count+= 10;
@@ -40,11 +41,13 @@ buttonsContainer.addEventListener('click', function(e){
          else if(styles.includes('increment')){
              count++;
              expWidth+= 10;
+             clickSound.play();
          }
          else if(styles.includes('reset')){
              count = 0;
              lvlCount = 1;
              expWidth -= expWidth;
+             clickSound.play();
          }
          expAmount.style.width = `${expWidth}%`;
          valore.textContent = count ;
@@ -57,5 +60,5 @@ buttonsContainer.addEventListener('click', function(e){
          lvlDownByMinus1(styles , count);
         
          lvlValue.textContent = lvlCount;
-         clickSound.play();
+
      })
