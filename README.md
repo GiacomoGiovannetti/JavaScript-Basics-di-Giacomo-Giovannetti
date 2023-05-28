@@ -52,7 +52,8 @@ The font i decided to go with is Audiowide, i picked this one because it has a t
 
 ## Issues
 
-I'm aware that the content jumps when the level up message is display, i could found a solution to this other than setting it to "position:absolute" but i'm not satisfied with this solution. I'm still working on it to resolve the issue.
+At the moment the project shouldn't have issues. In case you find one let me know!
+
 ## Contact
 
 Giacomo Giovannetti: [Linkedin](https://www.linkedin.com/in/giacomogiovannetti/)
