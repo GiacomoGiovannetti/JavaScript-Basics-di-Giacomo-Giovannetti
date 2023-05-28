@@ -118,17 +118,17 @@ body {
 #container #btn-container .btn:hover {
   background-color: #a7a7a7;
 }
-#container #btn-container #plus-btn-container {
+#container #btn-container #increment-btn-container {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
 }
-#container #btn-container #plus-btn-container #incr-10 {
+#container #btn-container #increment-btn-container #incr-10 {
   order: 1;
   max-width: 50%;
   box-shadow: 0.5rem 0.5rem 1rem rgba(68, 153, 19, 0.801);
 }
-#container #btn-container #plus-btn-container #increment {
+#container #btn-container #increment-btn-container #increment {
   max-width: 50%;
   box-shadow: 0.5rem 0.5rem 1rem rgba(68, 153, 19, 0.801);
 }
@@ -137,16 +137,16 @@ body {
   width: 50%;
   box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
 }
-#container #btn-container #minus-btn-container {
+#container #btn-container #decrement-btn-container {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
 }
-#container #btn-container #minus-btn-container #btn-10 {
+#container #btn-container #decrement-btn-container #btn-10 {
   max-width: 50%;
   box-shadow: 0.5rem 0.5rem 1rem rgba(160, 3, 3, 0.664);
 }
-#container #btn-container #minus-btn-container #decrement {
+#container #btn-container #decrement-btn-container #decrement {
   max-width: 50%;
   order: -1;
   box-shadow: 0.5rem 0.5rem 1rem rgba(160, 3, 3, 0.664);
@@ -182,20 +182,20 @@ body {
     align-items: center;
     justify-content: space-between;
   }
-  #container #btn-container #plus-btn-container {
+  #container #btn-container #increment-btn-container {
     margin-bottom: 0rem;
     width: 29%;
   }
-  #container #btn-container #plus-btn-container #minus-btn-container #decrement:hover, #container #btn-container #minus-btn-container #plus-btn-container #decrement:hover, #container #btn-container #plus-btn-container #minus-btn-container #btn-10:hover, #container #btn-container #minus-btn-container #plus-btn-container #btn-10:hover, #container #btn-container #plus-btn-container #increment:hover, #container #btn-container #plus-btn-container #incr-10:hover {
+  #container #btn-container #increment-btn-container #decrement-btn-container #decrement:hover, #container #btn-container #decrement-btn-container #increment-btn-container #decrement:hover, #container #btn-container #increment-btn-container #decrement-btn-container #btn-10:hover, #container #btn-container #decrement-btn-container #increment-btn-container #btn-10:hover, #container #btn-container #increment-btn-container #increment:hover, #container #btn-container #increment-btn-container #incr-10:hover {
     box-shadow: 0.5rem 0.5rem 1rem rgba(68, 153, 19, 0.801);
     background-color: rgba(68, 153, 19, 0.801);
     transform: scale(1.1);
   }
-  #container #btn-container #plus-btn-container #incr-10 {
+  #container #btn-container #increment-btn-container #incr-10 {
     box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
     transition: 0.5s ease-in;
   }
-  #container #btn-container #plus-btn-container #increment {
+  #container #btn-container #increment-btn-container #increment {
     box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
     transition: 0.5s ease-in;
   }
@@ -206,20 +206,20 @@ body {
   #container #btn-container #reset:hover {
     transform: scale(1.1);
   }
-  #container #btn-container #minus-btn-container {
+  #container #btn-container #decrement-btn-container {
     margin-top: 0rem;
     width: 29%;
   }
-  #container #btn-container #minus-btn-container #decrement:hover, #container #btn-container #minus-btn-container #btn-10:hover, #container #btn-container #minus-btn-container #plus-btn-container #incr-10:hover, #container #btn-container #plus-btn-container #minus-btn-container #incr-10:hover, #container #btn-container #minus-btn-container #plus-btn-container #increment:hover, #container #btn-container #plus-btn-container #minus-btn-container #increment:hover {
+  #container #btn-container #decrement-btn-container #decrement:hover, #container #btn-container #decrement-btn-container #btn-10:hover, #container #btn-container #decrement-btn-container #increment-btn-container #incr-10:hover, #container #btn-container #increment-btn-container #decrement-btn-container #incr-10:hover, #container #btn-container #decrement-btn-container #increment-btn-container #increment:hover, #container #btn-container #increment-btn-container #decrement-btn-container #increment:hover {
     box-shadow: 0.5rem 0.5rem 1rem rgba(160, 3, 3, 0.664);
     background-color: rgba(160, 3, 3, 0.664);
     transform: scale(1.1);
   }
-  #container #btn-container #minus-btn-container #btn-10 {
+  #container #btn-container #decrement-btn-container #btn-10 {
     box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
     transition: 0.5s ease-in;
   }
-  #container #btn-container #minus-btn-container #decrement {
+  #container #btn-container #decrement-btn-container #decrement {
     box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
     transition: 0.5s ease-in;
   }

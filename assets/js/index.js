@@ -5,7 +5,7 @@ const body = document.body;
 const section = document.createElement('section');
     body.appendChild(section);
 
-//dichiaro funzione per creazione elementi 
+//funzione per creazione elementi HTML
 function create(nome, tag, parent, id, text,  classSelector){
     nome = document.createElement(tag);
     parent.appendChild(nome);
@@ -53,12 +53,12 @@ const btnContainer = create('btnContainer','div', container , 'btn-container', '
 
 //creazione pulsanti decremento
 
-const minusBtnContainer = create('minusBtnContainer', 'div', btnContainer, 'minus-btn-container','');
+const decrementBtnContainer = create('decrementBtnContainer', 'div', btnContainer, 'decrement-btn-container','');
 
-const btnDecrement10 = create('btnDecrement10' , 'div', minusBtnContainer , 'btn-10','', 'btn');
+const btnDecrement10 = create('btnDecrement10' , 'div', decrementBtnContainer , 'btn-10','', 'btn');
 const valueBtnDecrement10 = create('valueBtnDecrement10', 'p', btnDecrement10, 'value-btn-10', '-10');
 
-const btnDecrement1 = create('btnDecrement1', 'div', minusBtnContainer, 'decrement','', 'btn');
+const btnDecrement1 = create('btnDecrement1', 'div', decrementBtnContainer, 'decrement','', 'btn');
 const valueBtnDecrement1 = create('valueBtnDecrement1', 'p', btnDecrement1, 'value-btn-decrement', '-1');
 
 //creazione pulsante reset
@@ -68,12 +68,12 @@ const valueBtnReset = create('valueBtn', 'p', btnReset, 'btn-reset', 'Reset');
 
 //creazione pulsanti incremento
 
-const plusBtnContainer = create('plusBtnContainer','div', btnContainer, 'plus-btn-container','');
+const incrementBtnContainer = create('incrementBtnContainer','div', btnContainer, 'increment-btn-container','');
 
-const btnIncrement10 = create('btnIncrement10', 'div', plusBtnContainer, 'incr-10','', 'btn');
+const btnIncrement10 = create('btnIncrement10', 'div', incrementBtnContainer, 'incr-10','', 'btn');
 const valueBtnIncrement10 = create('valueBtnIncrement10', 'p', btnIncrement10, 'value-btn-incr-10', '+10');
 
-const btnIncrement1 = create('btnIncrement1', 'div', plusBtnContainer, 'increment','', 'btn');
+const btnIncrement1 = create('btnIncrement1', 'div', incrementBtnContainer, 'increment','', 'btn');
 const valueBtnIncrement1 = create('valueBtnIncrement1', 'p', btnIncrement1, 'value-btn-increment', '+1');
 
 //disattivo evidenziazione

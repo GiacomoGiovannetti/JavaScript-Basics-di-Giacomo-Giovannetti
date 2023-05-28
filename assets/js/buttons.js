@@ -14,14 +14,13 @@ let expWidth = 0;
 
 lvlValue.textContent = lvlCount;
 
-/*Dichiarazione funzione di incremento/decremento/reset del valore del counter al 
-    click dei pulsanti e per sound effect al click dei pulsanti */
-//dichiarazione funzione di incremento/decremento/reset della barra dell'esperienza al click dei pulsanti 
+/* funzione di incremento/decremento/reset del valore del counter, della barra dell'esperienza al 
+ e sound effect al click dei pulsanti*/
 
 buttonsContainer.addEventListener('click', function(e){
     const styles = e.target.id;
          if(styles.includes('btn-10')){
-             if(count <= 9){
+             if(count <= 9){ // non fa scendere il valore sotto lo zero
                  count = 0; 
              }else{
                  count-= 10;
